@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShopEase Online Store</title>
+
+  <link rel="stylesheet" href="p_4.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-content">
+      <h1 id="storeTitle">ShopEase</h1>
+
+      <nav id="mainMenu" class="main-menu" aria-label="Product categories">
+        <button type="button" data-category="all">
+          All Products
+        </button>
+
+        <button type="button" data-category="electronics">
+          Electronics
+        </button>
+
+        <button type="button" data-category="fashion">
+          Fashion
+        </button>
+
+        <button type="button" data-category="home">
+          Home
+        </button>
+      </nav>
+
+      <button type="button" id="themeButton" class="theme-button">
+        Dark Mode
+      </button>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <section class="hero-section">
+      <h2 id="welcomeMessage">
+        Welcome to ShopEase Online Store
+      </h2>
+
+      <p id="liveMessage">
+        Find quality products at affordable prices.
+      </p>
+
+      <div class="control-area">
+        <label for="searchBox" class="visually-hidden">
+          Search products
+        </label>
+
+        <input
+          type="text"
+          id="searchBox"
+          placeholder="Search products..."
+          autocomplete="off"
+        />
+
+        <label for="categoryFilter" class="visually-hidden">
+          Filter products by category
+        </label>
+
+        <select id="categoryFilter">
+          <option value="all">All Categories</option>
+          <option value="electronics">Electronics</option>
+          <option value="fashion">Fashion</option>
+          <option value="home">Home</option>
+        </select>
+      </div>
+
+      <p id="feedback" class="feedback" aria-live="polite"></p>
+    </section>
+
+    <section class="products-section">
+      <h2>Featured Products</h2>
+
+      <div id="productContainer" class="product-container">
+
+        <article
+          class="product-card"
+          data-name="Wireless Headphones"
+          data-category="electronics"
+          data-price="4999"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80"
+            alt="Wireless headphones"
+          />
+
+          <div class="product-details">
+            <h3>Wireless Headphones</h3>
+            <p class="product-category">Electronics</p>
+            <p class="price">₹4,999</p>
+
+            <button type="button" class="add-cart">
+              Add to Cart
+            </button>
+          </div>
+        </article>
+
+        <article
+          class="product-card"
+          data-name="Smart Watch"
+          data-category="electronics"
+          data-price="7499"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80"
+            alt="Smart watch"
+          />
+
+          <div class="product-details">
+            <h3>Smart Watch</h3>
+            <p class="product-category">Electronics</p>
+            <p class="price">₹7,499</p>
+
+            <button type="button" class="add-cart">
+              Add to Cart
+            </button>
+          </div>
+        </article>
+
+        <article
+          class="product-card"
+          data-name="Leather Jacket"
+          data-category="fashion"
+          data-price="3299"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=600&q=80"
+            alt="Leather jacket"
+          />
+
+          <div class="product-details">
+            <h3>Leather Jacket</h3>
+            <p class="product-category">Fashion</p>
+            <p class="price">₹3,299</p>
+
+            <button type="button" class="add-cart">
+              Add to Cart
+            </button>
+          </div>
+        </article>
+
+        <article
+          class="product-card"
+          data-name="Coffee Maker"
+          data-category="home"
+          data-price="5899"
+        >
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6pFfG8LkyYkOHKcMgKDeTV1Lwbxe1hhdnN2IRZezmfw&s=10"
+            alt="Coffee maker"
+          />
+
+          <div class="product-details">
+            <h3>Coffee Maker</h3>
+            <p class="product-category">Home</p>
+            <p class="price">₹5,899</p>
+
+            <button type="button" class="add-cart">
+              Add to Cart
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="cart-section">
+      <h2>Shopping Cart</h2>
+
+      <ul id="cartList" class="cart-list">
+        <li id="emptyCart">
+          Your cart is empty.
+        </li>
+      </ul>
+
+      <div class="cart-summary">
+        <p>
+          Total:
+          <strong>₹<span id="cartTotal">0</span></strong>
+        </p>
+
+        <button type="button" id="clearCart" class="clear-cart-button">
+          Clear Cart
+        </button>
+      </div>
+    </section>
+
+    <section class="subscription-section">
+      <h2>Newsletter Subscription</h2>
+
+      <form id="subscriptionForm" novalidate>
+        <div class="form-group">
+          <label for="customerName">Name</label>
+
+          <input
+            type="text"
+            id="customerName"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="customerEmail">Email</label>
+
+          <input
+            type="email"
+            id="customerEmail"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+
+        <button type="submit" class="subscribe-button">
+          Subscribe
+        </button>
+
+        <p id="formMessage" class="form-message" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <div id="imagePreview" class="image-preview" aria-hidden="true">
+    <button
+      type="button"
+      id="closePreview"
+      class="close-preview"
+      aria-label="Close image preview"
+    >
+      &times;
+    </button>
+
+    <img id="previewImage" src="" alt="Product preview" />
+  </div>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 ShopEase Online Store</p>
+  </footer>
+
+  <script src="p_4.js"></script>
+</body>
+</html>
