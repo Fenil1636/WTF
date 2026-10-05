@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Bank Ltd. - Banking Utilities</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="p_3.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>🏦 Secure Bank Ltd.</h1>
+        <h2>Online Banking Calculator</h2>
+
+        <!-- Customer Information -->
+        <div class="card">
+            <h3>Customer Information</h3>
+
+            <label>Customer Name:</label>
+            <input type="text" id="customerName"
+                   placeholder="Enter your name">
+
+            <label>Monthly Income (₹):</label>
+            <input type="number" id="income"
+                   placeholder="Enter monthly income">
+
+            <label>Loan Amount (₹):</label>
+            <input type="number" id="loanAmount"
+                   placeholder="Enter loan amount">
+
+            <label>Annual Interest Rate (%):</label>
+            <input type="number" id="interestRate"
+                   placeholder="Enter interest rate">
+
+            <label>Loan Tenure (Years):</label>
+            <input type="number" id="loanYears"
+                   placeholder="Enter loan tenure">
+
+            <button onclick="checkLoanEligibility()">
+                Check Loan Eligibility
+            </button>
+
+            <button onclick="calculateEMI()">
+                Calculate EMI
+            </button>
+
+            <button onclick="calculateSimpleInterest()">
+                Calculate Simple Interest
+            </button>
+
+        </div>
+
+
+        <!-- Account Type -->
+        <div class="card">
+            <h3>Account Information</h3>
+
+            <label>Select Account Type:</label>
+
+            <select id="accountType">
+                <option value="savings">Savings Account</option>
+                <option value="current">Current Account</option>
+                <option value="fixed">Fixed Deposit</option>
+            </select>
+
+            <button onclick="displayAccountInfo()">
+                Display Account Information
+            </button>
+        </div>
+
+
+        <!-- Interest Table -->
+        <div class="card">
+            <h3>Interest Table</h3>
+
+            <label>Deposit Amount (₹):</label>
+            <input type="number" id="depositAmount"
+                   placeholder="Enter deposit amount">
+
+            <button onclick="generateInterestTable()">
+                Generate Interest Table
+            </button>
+        </div>
+
+
+        <!-- Result -->
+        <div class="result">
+            <h3>Result</h3>
+            <div id="output">
+                Enter details and select an operation.
+            </div>
+        </div>
+
+    </div>
+
+    <!-- External JavaScript File -->
+    <script src="p_3.js"></script>
+
+</body>
+</html>
