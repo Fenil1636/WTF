@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>CityCare Hospital - Patient Registration</title>
+    <link rel="stylesheet" href="p_5.css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CityCare Hospital</h1>
+            <h2>Patient Registration Form</h2>
+        </header>
+
+        <form id="registrationForm" novalidate>
+            <!-- Personal Information -->
+            <section class="form-section">
+                <h3>Personal Information</h3>
+
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input 
+                        type="text" 
+                        id="fullName" 
+                        name="fullName" 
+                        placeholder="e.g. Riya Sharma" 
+                        required 
+                        maxlength="50"
+                    />
+                    <small class="error-msg" id="fullNameError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Date of Birth *</label>
+                    <input 
+                        type="date" 
+                        id="dob" 
+                        name="dob" 
+                        required 
+                        
+                    />
+                    <small class="error-msg" id="dobError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label>Gender *</label>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="gender" value="male" required /> Male
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="female" /> Female
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="other" /> Other
+                        </label>
+                    </div>
+                    <small class="error-msg" id="genderError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="bloodGroup">Blood Group</label>
+                    <select id="bloodGroup" name="bloodGroup">
+                        <option value="">-- Select --</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                    </select>
+                </div>
+            </section>
+
+            <!-- Contact Information -->
+            <section class="form-section">
+                <h3>Contact Information</h3>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="e.g. xyz@example.com" 
+                        required 
+                    />
+                    <small class="error-msg" id="emailError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile">Mobile Number *</label>
+                    <input 
+                        type="tel" 
+                        id="mobile" 
+                        name="mobile" 
+                        placeholder="e.g. 9876543210" 
+                        required 
+                        maxlength="10"
+                        pattern="[0-9]{10}"
+                    />
+                    <small class="error-msg" id="mobileError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <textarea 
+                        id="address" 
+                        name="address" 
+                        rows="3" 
+                        placeholder="City, State, PIN"
+                        maxlength="200"
+                    ></textarea>
+                </div>
+            </section>
+
+            <!-- Account Information -->
+            <section class="form-section">
+                <h3>Account Information</h3>
+
+                <div class="form-group">
+                    <label for="password">Password *</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        placeholder="Enter password here" 
+                        required 
+                        minlength="8"
+                    />
+                    <small class="error-msg" id="passwordError"></small>
+                    <div class="password-strength" id="passwordStrength"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password *</label>
+                    <input 
+                        type="password" 
+                        id="confirmPassword" 
+                        name="confirmPassword" 
+                        placeholder="Re-enter password" 
+                        required 
+                    />
+                    <small class="error-msg" id="confirmPasswordError"></small>
+                </div>
+            </section>
+
+            <!-- Additional Details -->
+            <section class="form-section">
+                <h3>Additional Details</h3>
+
+                <div class="form-group">
+                    <label for="medicalHistory">Medical History (if any)</label>
+                    <textarea 
+                        id="medicalHistory" 
+                        name="medicalHistory" 
+                        rows="3" 
+                        placeholder="Allergies, chronic conditions, etc."
+                        maxlength="300"
+                    ></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="idProof">Upload ID Proof *</label>
+                    <input 
+                        type="file" 
+                        id="idProof" 
+                        name="idProof" 
+                        accept=".jpg,.jpeg,.png,.pdf" 
+                        required 
+                    />
+                    <small class="error-msg" id="idProofError"></small>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label>
+                        <input type="checkbox" id="terms" name="terms" required />
+                        I agree to the <a href="#">Terms & Conditions</a> *
+                    </label>
+                    <small class="error-msg" id="termsError"></small>
+                </div>
+            </section>
+
+            <div class="form-actions">
+                <button type="submit">Register</button>
+                <button type="reset">Clear Form</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="p_5.js"></script>
+</body>
+</html>
